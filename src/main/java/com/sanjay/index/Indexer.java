@@ -40,7 +40,7 @@ public class Indexer {
       //index file name
       Field fileNameField = new Field(LuceneConstants.FILE_NAME,
          file.getName(),Field.Store.YES,Field.Index.NOT_ANALYZED);
-      //index file path
+      //index file path added
       Field filePathField = new Field(LuceneConstants.FILE_PATH,
          file.getCanonicalPath(),Field.Store.YES,Field.Index.NOT_ANALYZED);
 
