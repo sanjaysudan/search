@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:include schemaLocation="EBMHeaderType.xsd"/>
+<xs:element name="WebSellingClassificationEBM" type="WebSellingClassificationEBM"/>
+<xs:complexType name="WebSellingClassificationEBM">
+		<xs:sequence>
+			<xs:element name="Header" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="DataArea" type="DataArea" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CatalogueHierarchyLevelFive">
+		<xs:annotation>
+			<xs:documentation>A Catalogue is an identified, named Selling Classifiction for retail products and services offered for sale e.g. 'Home&amp;Technology', 'Bathroom', 'Foodhall', ''Foods', 'Healthy Eating'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CatalogueHierarchyLevelName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueID" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Unique token ID for a 'SellingClassification ID' (i.e. as referenced on the Web)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueParentID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueName" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Business name assigned to a WebCatalogue 'Selling Classification'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a calalogue is no longer in production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueLastApprovedDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the date when the Selling Classification was last approved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a catalogue enters production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueIDStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the status of the Selling Classification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedOn" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueHierarchyLevelSix" type="CatalogueHierarchyLevelSix" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CatalogueHierarchyLevelFour">
+		<xs:annotation>
+			<xs:documentation>A Catalogue is an identified, named Selling Classifiction for retail products and services offered for sale e.g. 'Home&amp;Technology', 'Bathroom', 'Foodhall', ''Foods', 'Healthy Eating'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CatalogueHierarchyLevelName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueID" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Unique token ID for a 'SellingClassification ID' (i.e. as referenced on the Web)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueParentID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueName" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Business name assigned to a WebCatalogue 'Selling Classification'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a calalogue is no longer in production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueLastApprovedDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the date when the Selling Classification was last approved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a catalogue enters production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueIDStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the status of the Selling Classification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedOn" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueHierarchyLevelFive" type="CatalogueHierarchyLevelFive" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CatalogueHierarchyLevelOne">
+		<xs:annotation>
+			<xs:documentation>A Catalogue is an identified, named Selling Classifiction for retail products and services offered for sale e.g. 'Home&amp;Technology', 'Bathroom', 'Foodhall', ''Foods', 'Healthy Eating'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CatalogueHierarchyLevelName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueID" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Unique token ID for a 'SellingClassification ID' (i.e. as referenced on the Web)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueParentID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueName" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Business name assigned to a WebCatalogue 'Selling Classification'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a calalogue is no longer in production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueLastApprovedDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the date when the Selling Classification was last approved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a catalogue enters production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueIDStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the status of the Selling Classification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedOn" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueHierarchyLevelTwo" type="CatalogueHierarchyLevelTwo" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CatalogueHierarchyLevelSeven">
+		<xs:annotation>
+			<xs:documentation>A Catalogue is an identified, named Selling Classifiction for retail products and services offered for sale e.g. 'Home&amp;Technology', 'Bathroom', 'Foodhall', ''Foods', 'Healthy Eating'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CatalogueHierarchyLevelName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueID" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Unique token ID for a 'SellingClassification ID' (i.e. as referenced on the Web)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueParentID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueName" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Business name assigned to a WebCatalogue 'Selling Classification'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a calalogue is no longer in production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueLastApprovedDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the date when the Selling Classification was last approved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a catalogue enters production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueIDStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the status of the Selling Classification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedOn" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CatalogueHierarchyLevelSix">
+		<xs:annotation>
+			<xs:documentation>A Catalogue is an identified, named Selling Classifiction for retail products and services offered for sale e.g. 'Home&amp;Technology', 'Bathroom', 'Foodhall', ''Foods', 'Healthy Eating'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CatalogueHierarchyLevelName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueID" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Unique token ID for a 'SellingClassification ID' (i.e. as referenced on the Web)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueParentID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueName" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Business name assigned to a WebCatalogue 'Selling Classification'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a calalogue is no longer in production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueLastApprovedDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the date when the Selling Classification was last approved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a catalogue enters production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueIDStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the status of the Selling Classification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedOn" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueHierarchyLevelSeven" type="CatalogueHierarchyLevelSeven" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CatalogueHierarchyLevelThree">
+		<xs:annotation>
+			<xs:documentation>A Catalogue is an identified, named Selling Classifiction for retail products and services offered for sale e.g. 'Home&amp;Technology', 'Bathroom', 'Foodhall', ''Foods', 'Healthy Eating'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CatalogueHierarchyLevelName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueID" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Unique token ID for a 'SellingClassification ID' (i.e. as referenced on the Web)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueParentID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueName" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Business name assigned to a WebCatalogue 'Selling Classification'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a calalogue is no longer in production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueLastApprovedDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the date when the Selling Classification was last approved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a catalogue enters production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueIDStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the status of the Selling Classification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedOn" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueHierarchyLevelFour" type="CatalogueHierarchyLevelFour" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CatalogueHierarchyLevelTwo">
+		<xs:annotation>
+			<xs:documentation>A Catalogue is an identified, named Selling Classifiction for retail products and services offered for sale e.g. 'Home&amp;Technology', 'Bathroom', 'Foodhall', ''Foods', 'Healthy Eating'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CatalogueHierarchyLevelName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueID" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Unique token ID for a 'SellingClassification ID' (i.e. as referenced on the Web)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueParentID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueName" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Business name assigned to a WebCatalogue 'Selling Classification'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a calalogue is no longer in production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueLastApprovedDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the date when the Selling Classification was last approved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date a catalogue enters production</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CatalogueIDStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the status of the Selling Classification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedOn" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CatalogueHierarchyLevelThree" type="CatalogueHierarchyLevelThree" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DataArea">
+		<xs:sequence>
+			<xs:element name="ActionCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="LanguagueCountry" type="LanguagueCountry" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LanguagueCountry">
+		<xs:sequence>
+			<xs:element name="LanguageID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="LanguageName" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CountryID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CountryName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="LanguageCountryContext" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CatalogueHierarchyLevelOne" type="CatalogueHierarchyLevelOne" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	</xs:schema>

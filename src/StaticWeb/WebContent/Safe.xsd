@@ -1,0 +1,64 @@
+<xs:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:simpleType name="OperationType">
+   <xs:restriction base="xs:string">
+   <xs:enumeration value="INSERT" />
+   <xs:enumeration value="UPDATE" />
+   <xs:enumeration value="DELETE" />
+  </xs:restriction>
+</xs:simpleType>
+<xs:complexType name="CategoryType">
+  <xs:simpleContent>
+   <xs:extension base="xs:string">
+    <xs:attribute name="name" use="required">
+     <xs:simpleType>
+      <xs:restriction base="xs:string">
+       <xs:maxLength value="254"/>
+      </xs:restriction>
+     </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="identifier" use="required">
+     <xs:simpleType>
+      <xs:restriction base="xs:string">
+       <xs:maxLength value="254"/>
+      </xs:restriction>
+     </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute type="xs:string" name="catalogueId" use="required" />
+    <xs:attribute name="longDescription" use="optional">
+     <xs:simpleType>
+      <xs:restriction base="xs:string">
+       <xs:maxLength value="4000"/>
+      </xs:restriction>
+     </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="shortDescription" use="optional">
+     <xs:simpleType>
+      <xs:restriction base="xs:string">
+       <xs:maxLength value="254"/>
+      </xs:restriction>
+     </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="parentId" use="optional">
+     <xs:simpleType>
+      <xs:restriction base="xs:string">
+       <xs:maxLength value="254"/>
+      </xs:restriction>
+     </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute type="xs:boolean" name="published" default="true" />
+    <xs:attribute type="OperationType" name="op" use="required" />
+   </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+<xs:element name="import">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="category" type="CategoryType" 
+        maxOccurs="unbounded" minOccurs="0" />
+   </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>
+
